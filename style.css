@@ -1,4 +1,12 @@
 /* colors */
+/* 
+font-family: 'Boogaloo', cursive;    - buttons
+font-family: 'Jockey One', sans-serif;      - titles
+font-family: 'Josefin Sans', sans-serif;       - content
+font-family: 'Reenie Beanie', cursive; -  כתב יד
+ */
+
+
 
 :root {
   --c-purpel: #6b5b95;
@@ -7,6 +15,10 @@
   --c-horenge: #ff7b25;
   --c-gray-2: #ccc;
   --c-gray-3: #555;
+}
+
+.link-b{
+    text-decoration:none;
 }
 
 
@@ -39,9 +51,43 @@ header {
   display: block;
   padding: 1em;
   color: white;
-  font-family: "Potta One";
+  font-family: 'Boogaloo', cursive;
+font-size: 2em;
 }
 
 .navigation a:hover {
   background: #1565c0;
+}
+
+
+
+section{
+    height: 3000px;
+}
+
+
+
+
+footer {
+    margin: -5px 3em;
+    background: var(--c-purpel);
+    padding:2em;
+    border-radius: 20px 20px 0 0;
+    display: flex-end;
+    font-family: 'Jockey One', sans-serif; 
+    align-items:flex-end;
+}
+
+
+footer a{
+    display: inline;
+    margin:1em;
+}
+footer span{
+    margin: 1em;
+    display: block;
+}
+footer img{
+    display: inline;
+    margin-bottom: -70px;
 }
