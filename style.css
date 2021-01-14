@@ -1,1 +1,47 @@
+/* colors */
 
+:root {
+  --c-purpel: #6b5b95;
+  --c-orenge: #feb236;
+  --c-pink: #d64161;
+  --c-horenge: #ff7b25;
+  --c-gray-2: #ccc;
+  --c-gray-3: #555;
+}
+
+
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  background: var(--c-pink);
+}
+#logo img{
+    width: 4em;
+}
+#logo {
+    padding: 0.2em;
+}
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-family: "Potta One";
+}
+
+.navigation a:hover {
+  background: #1565c0;
+}
