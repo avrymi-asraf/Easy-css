@@ -14,7 +14,9 @@ font-family: 'Reenie Beanie', cursive; -  כתב יד
   --c-gray-2: #ccc;
   --c-gray-3: #555;
 }
-
+body {
+  background: ghostwhite;
+}
 .link-b {
   text-decoration: none;
 }
@@ -32,7 +34,11 @@ header {
   justify-content: flex-start;
   align-items: center;
   margin: 0;
-  background: var(--c-pink);
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 248, 255, 1),
+    rgba(248, 248, 255, 0.8)
+  );
 }
 #logo img {
   width: 4em;
@@ -44,22 +50,69 @@ header {
   text-decoration: none;
   display: block;
   padding: 1em;
-  color: white;
+  color: var(--c-gray-3);
   font-family: "Boogaloo", cursive;
   font-size: 2em;
+  transition-property: background;
+  transition-duration: 0.6s;
 }
 
 .navigation a:hover {
-  background: #1565c0;
+  background: var(--c-pink);
 }
 
-.firstSec{
-    margin-top: 100px;
+/* toc-------------------------------- */
+#toc {
+  transition-property: right;
+  transition-duration: 0.6s;
+  position: fixed;
+  width: 250px;
+  height: 50vh;
+  right: -205px;
+  top: 20vh;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: [emoje]50px [links]200px;
+  align-items: center;
+  justify-items: center;
+  background: linear-gradient(
+    to left,
+    rgba(248, 248, 255, 1),
+    rgba(248, 248, 255, 0)
+  );
+  border-radius: 3%;
+}
+
+#links {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 100%;
+}
+#emoje {
+  font-size: 30px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 100%;
+}
+
+#links li {
+  font-family: "Jockey One", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#toc:hover {
+  right: 0;
+}
+
+.firstSec {
+  margin-top: 100px;
 }
 
 section {
-    height: 100vh;
-    align-content: center;
+  height: 100vh;
+  align-content: center;
 }
 /*                                                                                      grid for section content */
 
@@ -67,23 +120,28 @@ section {
   display: grid;
   grid-template-columns: [le-ma]15vw [content-left]35vw [content-right]35vw [rit-ma]15vw;
   grid-template-rows: [only-text]10vw [text-img]10vw [image]10vw;
-  column-gap: 5px;
-  row-gap: 5px;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
-.textbox {
-  background: #555;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+.left-up {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.left-do {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.right-do {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.right-up {
+  grid-column: 3/4;
+  grid-row: 1/3;
 }
 
 .content img {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
   object-fit: cover;
   width: 100%;
 }
@@ -91,51 +149,43 @@ section {
 
 /* exmple sections                           */
 
-.exemple{
-    display: flex;
-    background: var(--c-gray-2);
-    /* text-align: center; */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-     /* align-content: center;  */
-    
+.exemple {
+  display: flex;
+  background: var(--c-gray-2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#aaaa{
-    width: 500px;
-    background: #d64161;
+#aaaa {
+  width: 500px;
+  background: #d64161;
 }
 
- .exemple h2{
-    /* padding: 5vw 0; */
-    font-family: 'Jockey One', sans-serif;  
-    font-size: 5vw;
-    margin-top: -1vh;;
+.exemple h2 {
+  font-family: "Jockey One", sans-serif;
+  font-size: 5vw;
+  margin-top: -1vh;
 }
 
-.exemples{
-    display:flex;
-    width: 100%;
-    justify-content: space-around;
+.exemples {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
-.exemples a{
-    background: var(--c-orenge);
-    border-radius: 3%;
-    display: block;
-    padding: 1vw;
-    text-align: center;
-
-
+.exemples a {
+  background: var(--c-orenge);
+  border-radius: 3%;
+  display: block;
+  padding: 1vw;
+  text-align: center;
 }
-.exemples img{
-    height: 30vh;
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
+.exemples img {
+  height: 30vh;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
-
-
 
 footer {
   margin: 40px 3em -5px;
@@ -159,9 +209,6 @@ footer img {
   display: inline;
   margin-bottom: -70px;
 }
-
-
-
 
 @media all and (max-width: 800px) {
   .navigation {
