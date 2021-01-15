@@ -9,11 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Jockey+One&family=Josefin+Sans:ital,wght@1,300&family=Reenie+Beanie&display=swap"
       rel="stylesheet"
     />
-    <title>Grid </title>
+    <title>Grid</title>
   </head>
   <body>
     <header>
-
       <nav id="navbar" class="navigation">
         <a id="logo"
           ><img
@@ -21,69 +20,102 @@
             alt=""
         /></a>
         <a href="index.html" class="link-b">Home 🏠</a>
-        <a href="grid.html" class="link-b">Grid 🔲</a>
+        <a href="grid.html"id="tihs-page" class="link-b">Grid 🔲</a>
         <a href="flex.html" class="link-b">Flex ↔</a>
         <a href="animation.html" class="link-b">Animation 💫</a>
       </nav>
     </header>
 
-
     <div id="toc">
       <a id="emoje">📑</a>
       <ul id="links">
-        <li><a href="" class="link-b">so</a></li>
-        <li><a href="" class="link-b">well</a></li>
-        <li><a href="" class="link-b">city</a></li>
-        <li><a href="" class="link-b">home</a></li>
+        <li><a href="#a" class="link-b">What is grid</a></li>
+        <li><a href="#b" class="link-b">Item's Location</a></li>
+        <li><a href="#c" class="link-b">exemples</a></li>
+        <li><a href="#d" class="link-b">footer</a></li>
       </ul>
     </div>
 
-
-  
-    <section class="pageTitle firstSec"></section>
-    <section class="content">
-        <div class="textbox intro"><h1>some text</h1><p class="contentp">The flex property is a sub-property of the Flexible Box Layout module.
-      This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-      second and third parameters (flex-shrink and flex-basis) are optional.</p></div>
-        <img src="https://www.tzomet-hrz.co.il/wp-content/uploads/2020/07/768c56f383d505bc07d93deec2834c18.jpg" alt="">
-    </section>
-
-
-
-
-
-    <section class="content">
-      The flex property is a sub-property of the Flexible Box Layout module.
-      This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-      second and third parameters (flex-shrink and flex-basis) are optional.
+    <section class="pageTitle firstSec">
+      <h1>CSS Grid</h1>
+      <img
+        src="https://media.giphy.com/media/l3vRo7mdeDM3WfF0k/giphy.gif"
+        alt=""
+      />
     </section>
     <section class="content">
-      The flex property is a sub-property of the Flexible Box Layout module.
-      This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-      second and third parameters (flex-shrink and flex-basis) are optional.
+      <div id="a" class="textbox intro left-up">
+        <h1>What is grid</h1>
+        <p class="contentp">
+          <code>grid</code> It is a 2-dimensional system, meaning it can handle
+          both columns and rows. after we aplliyg <code>display:grid;</code> and
+          difinde the shep of grid usig <code>grid-template-columns</code> and
+          <code>grid-template-row</code> on element, every sub element under him
+          we can define any area on grid.
+        </p>
+      </div>
+      <img
+        class="right-do"
+        src="https://camo.githubusercontent.com/b890fed7a538163c82168d1e5ce51c9f36d4a59924b031ec46fd05d6e51a9a3e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313630302f312a514a5a386e543375357a77515168464e6464745362412e676966"
+        alt=""
+      />
     </section>
-      <section class="exemple">
-     <h2 class="exmpleTilte">examples</h2>
-      <div class="exemples">
+    <section class="content">
+      <div id="b" class="textbox intro left-up">
+        <h1>Item's Location</h1>
+        <p class="contentP">
+          Determines a grid item’s location within the grid by referring to
+          specific grid lines. grid-column-start/grid-row-start is the line
+          where the item begins, and grid-column-end/grid-row-end is the line
+          where the item ends.
+        </p>
+      </div>
+      <img
+        class="right-up"
+        src="https://miro.medium.com/max/1440/1*OSOvE92PWq68ODNhXPjyqg.gif"
+        alt=""
+      />
+    </section>
+    <section class="exemple">
+      <h2 class="exmpleTilte">examples</h2>
+      <div class="exemples" id="c">
         <a
-          ><img
-            src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif"
-            alt=""
-          />
+          ><iframe
+            height="265"
+            style="width: 100%"
+            scrolling="no"
+            title="CSS Grid Template Builder"
+            src="https://codepen.io/anthonydugois/embed/RpYBmy?height=265&theme-id=light&default-tab=js,result"
+            frameborder="no"
+            loading="lazy"
+            allowtransparency="true"
+            allowfullscreen="true"
+          >
+            See the Pen
+            <a href="https://codepen.io/anthonydugois/pen/RpYBmy"
+              >CSS Grid Template Builder</a
+            >
+            by Anthony Dugois (<a href="https://codepen.io/anthonydugois"
+              >@anthonydugois</a
+            >) on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
           <p>here there is an examples</p></a
         >
         <a
-          ><img
-            src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif"
-            alt=""
-          />
+          ><iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/jV8B24rSN5o?controls=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
           <p>here there is an examples</p></a
         >
       </div>
     </section>
 
-
-    <footer>
+    <footer id="d">
       <a href="#" class="link-b">Privacy</a>
       <a href="#" class="link-b">Terms</a>
       <a href="#" class="link-b">Contact</a>

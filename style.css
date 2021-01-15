@@ -34,11 +34,12 @@ header {
   justify-content: flex-start;
   align-items: center;
   margin: 0;
-  background: linear-gradient(
+  backdrop-filter: blur(20px);
+  /* background: linear-gradient(
     to bottom,
     rgba(248, 248, 255, 1),
     rgba(248, 248, 255, 0.8)
-  );
+  ); */
 }
 #logo img {
   width: 4em;
@@ -58,6 +59,9 @@ header {
 }
 
 .navigation a:hover {
+  background: var(--c-pink);
+}
+.navigation #tihs-page {
   background: var(--c-pink);
 }
 
@@ -100,6 +104,7 @@ header {
   text-decoration: none;
   font-size: 20px;
   margin-top: 20px;
+   line-height: 200%;
 }
 
 #toc:hover {
@@ -114,14 +119,39 @@ section {
   height: 100vh;
   align-content: center;
 }
-/*                                                                                      grid for section content */
+/* title section */
+
+.pageTitle {
+  display: grid;
+  grid-template-rows: 30vh 55vh;
+  /* grid-template-columns: 50vw 50vh; */
+  justify-items: center;
+}
+.pageTitle h1 {
+  grid-row: 1/2;
+  filter: none;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 30vh;
+  font-weight: 1000;
+  margin: 0;
+}
+.pageTitle img {
+  grid-row: 2/3;
+  /* padding: 4vh; */
+  object-fit: cover;
+  display: inline;
+  max-height: 100%;
+  margin: 0;
+}
+
+/*                                     grid for section content */
 
 .content {
   display: grid;
   grid-template-columns: [le-ma]15vw [content-left]35vw [content-right]35vw [rit-ma]15vw;
   grid-template-rows: [only-text]10vw [text-img]10vw [image]10vw;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 2vw;
+  row-gap: 1vw;
 }
 
 .left-up {
@@ -140,12 +170,28 @@ section {
   grid-column: 3/4;
   grid-row: 1/3;
 }
+.textbox{
+  border: #d64161;
+  border-radius: 3px;
+  border-width: 4px;
+
+ /* background-image: radial-gradient(circle, rgba(255, 0, 0, 0),  #d6416100, #d64161); */
+ /* background: #d64161; */
+}
+.content h1 {
+  font-family: "Jockey One", sans-serif;
+  font-size: 5vh;
+}
+.content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3vh;
+  line-height: 150%;
+}
 
 .content img {
   object-fit: cover;
   width: 100%;
 }
-
 
 /* exmple sections                           */
 
@@ -157,10 +203,6 @@ section {
   align-items: center;
 }
 
-#aaaa {
-  width: 500px;
-  background: #d64161;
-}
 
 .exemple h2 {
   font-family: "Jockey One", sans-serif;
