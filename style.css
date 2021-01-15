@@ -20,6 +20,14 @@ body {
 .link-b {
   text-decoration: none;
 }
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
 
 header {
   position: fixed;
@@ -35,34 +43,44 @@ header {
   align-items: center;
   margin: 0;
   backdrop-filter: blur(20px);
-  /* background: linear-gradient(
+}
+/* .navigation{ 
+  
+  background: linear-gradient(
     to bottom,
     rgba(248, 248, 255, 1),
     rgba(248, 248, 255, 0.8)
-  ); */
-}
+  );} */
+ 
 #logo img {
-  width: 4em;
+  width: 3em;
 }
 #logo {
-  padding: 0.2em;
+  height: 3em;
 }
 .navigation a {
   text-decoration: none;
-  display: block;
-  padding: 1em;
+  display: flex;
+   padding: 0 1em; 
+  height: 3em;
   color: var(--c-gray-3);
   font-family: "Boogaloo", cursive;
   font-size: 2em;
   transition-property: background;
   transition-duration: 0.6s;
+  text-align: center;
+  justify-content: center; 
+  align-items: center;
+ 
 }
 
 .navigation a:hover {
   background: var(--c-pink);
+  backdrop-filter: blur(20px);
 }
 .navigation #tihs-page {
   background: var(--c-pink);
+  backdrop-filter: blur(20px);
 }
 
 /* toc-------------------------------- */
@@ -152,6 +170,7 @@ section {
   grid-template-rows: [only-text]10vw [text-img]10vw [image]10vw;
   column-gap: 2vw;
   row-gap: 1vw;
+  overflow:auto;
 }
 
 .left-up {
@@ -180,11 +199,11 @@ section {
 }
 .content h1 {
   font-family: "Jockey One", sans-serif;
-  font-size: 5vh;
+  font-size: 6vh;
 }
 .content p {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 3vh;
+  font-size: 4vh;
   line-height: 150%;
 }
 
@@ -216,7 +235,7 @@ section {
   justify-content: space-around;
 }
 .exemples a {
-  background: var(--c-orenge);
+  background: var(--c-horenge);
   border-radius: 3%;
   display: block;
   padding: 1vw;

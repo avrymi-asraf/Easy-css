@@ -28,55 +28,109 @@
     <div id="toc">
       <a id="emoje">📑</a>
       <ul id="links">
-        <li><a href="" class="link-b">so</a></li>
-        <li><a href="" class="link-b">well</a></li>
-        <li><a href="" class="link-b">city</a></li>
-        <li><a href="" class="link-b">home</a></li>
+        <li><a href="#a" class="link-b">What is Flex?</a></li>
+        <li><a href="#b" class="link-b">Justify-content</a></li>
+        <li><a href="#c" class="link-b">flex property</a></li>
+        <li><a href="#d" class="link-b">examples</a></li>
       </ul>
     </div>
 
-    <section class="pageTitle firstSec"></section>
-    <section class="content">
-      <div class="textbox intro left-up">
-        <h1>some text</h1>
+    <section class="pageTitle firstSec">
+      <h1>Flex</h1>
+      <img
+        src="https://media.giphy.com/media/l44Q95qoSzCe12IBq/giphy.gif"
+        alt=""
+      />
+    </section>
+    <section class="content" id="a">
+      <div class="textbox intro right-up">
+        <h1>What is Flex?</h1>
         <p class="contentp">
-          The flex property is a sub-property of the Flexible Box Layout module.
-          This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-          second and third parameters (flex-shrink and flex-basis) are optional.
+          <code>flex</code> allow the container to alter it's item’s
+          width/height (and order) to best fill the available space. we define
+          the container <code>display:flex;</code> it's enables a flex context
+          for all it's direct children.
         </p>
       </div>
       <img
-        class="right-do"
-        src="https://www.tzomet-hrz.co.il/wp-content/uploads/2020/07/768c56f383d505bc07d93deec2834c18.jpg"
+        class="left-do"
+        src="https://blog.hubspot.com/hs-fs/hubfs/Heres%20the%20Difference%20Between%20Flexbox,%20CSS%20Grid,%20%26%20Bootstrap-1.gif?width=600&name=Heres%20the%20Difference%20Between%20Flexbox,%20CSS%20Grid,%20%26%20Bootstrap-1.gif"
         alt=""
       />
     </section>
 
-    <section class="content">
-      The flex property is a sub-property of the Flexible Box Layout module.
-      This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-      second and third parameters (flex-shrink and flex-basis) are optional.
+    <section class="content" id="b">
+      <div class="textbox intro left-up">
+        <h1>Justify-content</h1>
+        <p class="contentp">
+          <code>justify-content</code> define the alignment along the main axis,
+          its helps distribute extra free space leftover, when either all the
+          flex items on line are inflexible. (or are flexible but have reached
+          their maximum size.)
+        </p>
+      </div>
+      <img
+        class="right-do"
+        src="https://miro.medium.com/max/2562/1*sO41osiKy2FV__Ca_MmLlQ.gif"
+        alt=""
+      />
     </section>
-    <section class="content">
-      The flex property is a sub-property of the Flexible Box Layout module.
-      This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-      second and third parameters (flex-shrink and flex-basis) are optional.
+    <section class="content" id="c">
+      <div class="textbox intro right-up">
+        <h1>flex property</h1>
+        <p class="contentp">
+          <code>flex:</code> it's the shorthand for
+          <code>flex-grow, flex-shrink</code>, and
+          <code>flex-basis</code> combined. the second and third parameters
+          (<code>flex-shrink, flex-basis</code>) are optional. <br />
+        </p>
+      </div>
+      <p class="left-do">
+        <code>flex-grow</code> It dictates what amount of the available space
+        inside the flex container the item should take up. <br />
+        <code>flex-basis</code> This defines the default size of an element
+        before the remaining space is distributed <br />
+        <code>flex-shrink</code>This defines the ability for a flex item to
+        shrink if necessary.
+      </p>
+
+      <img
+        class="left-up"
+        src="https://miro.medium.com/max/2832/1*gHyLHG52cySgLmy0x-edZA.gif"
+        alt=""
+      />
     </section>
-    <section class="exemple">
+    <section class="exemple" id="d">
       <h2 class="exmpleTilte">examples</h2>
       <div class="exemples">
         <a
-          ><img
-            src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif"
-            alt=""
-          />
+          ><iframe
+            height="265"
+            style="width: 100%"
+            scrolling="no"
+            title="aOoGVz"
+            src="https://codepen.io/trilm/embed/aOoGVz?height=265&theme-id=light&default-tab=html,result"
+            frameborder="no"
+            loading="lazy"
+            allowtransparency="true"
+            allowfullscreen="true"
+          >
+            See the Pen
+            <a href="https://codepen.io/trilm/pen/aOoGVz">aOoGVz</a> by Michael
+            Trilford (<a href="https://codepen.io/trilm">@trilm</a>) on
+            <a href="https://codepen.io">CodePen</a>.
+          </iframe>
           <p>here there is an examples</p></a
         >
         <a
-          ><img
-            src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif"
-            alt=""
-          />
+          ><iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JJSoEo8JSnc?controls=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
           <p>here there is an examples</p></a
         >
       </div>
