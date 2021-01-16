@@ -22,10 +22,9 @@
         <a href="index.html" class="link-b">Home 🏠</a>
         <a href="grid.html" class="link-b">Grid 🔲</a>
         <a href="flex.html" class="link-b">Flex ↔</a>
-        <a href="animation.html" class="link-b" id="tihs-page" >Animation 💫</a>
+        <a href="animation.html" class="link-b" id="tihs-page">Animation 💫</a>
       </nav>
     </header>
-
 
     <div id="toc">
       <a id="emoje">📑</a>
@@ -37,49 +36,95 @@
       </ul>
     </div>
 
-  
-    <section class="pageTitle firstSec"></section>
+    <section class="pageTitle firstSec">
+      <h1>Animation</h1>
+      <div id=#animation-container><div id="animation"></div></div>>
+    </section>
     <section class="content">
-        <div class="textbox intro"><h1>some text</h1><p class="contentp">The flex property is a sub-property of the Flexible Box Layout module.
-      This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-      second and third parameters (flex-shrink and flex-basis) are optional.</p></div>
-        <img src="https://www.tzomet-hrz.co.il/wp-content/uploads/2020/07/768c56f383d505bc07d93deec2834c18.jpg" alt="">
+      <div class="textbox intro left-up">
+        <h1>How Define Animation?</h1>
+        <p class="contentp">
+          we can define animation an several ways.<br />
+          by using in <code>@keyframes</code> we declare in the element
+          <code>animation-name:</code> and <code>animation-duration:;</code> and
+          in now section define the <code>@keyframes</code> using in some name.
+          define frames and in every frame how we want the elelment look. <br />
+          we can use in <code>from:, to:</code> keywords, then define only 2
+          frames (start and end). or using percent like this
+          <code>@keyframes{0%{} 25%{} 70%{} 100%{}}</code>
+        </p>
+      </div>
+
+      <img
+        class="right-do"
+        src="https://www.script-tutorials.com/wp-content/uploads/2015/12/fimg.png"
+        alt=""
+      />
     </section>
 
+    <section class="content">
+      <div class="textbox intro right-up">
+        <h1>Main parameters</h1>
+        <p class="contentp">
+          <code>animation-iteration</code>We can define any number, or
+          <code>infinite</code><br />
+          <code>animation-delay</code><br />
+          <code>animation-direction</code>we can define <code>normal</code> or
+          <code>alternate</code>The animation is played forwards first, then
+          backwards<br />
+          <code>animation-timing-function</code> define the speed curve of
+          animation.
+        </p>
+      </div>
 
-
-
-
+      <img
+        class="left-do"
+        src="https://miro.medium.com/max/2816/1*PQR9oa_BDoqBlXCa5E-1Aw.gif"
+        alt=""
+      />
+    </section>
     <section class="content">
       The flex property is a sub-property of the Flexible Box Layout module.
       This is the shorthand for flex-grow, flex-shrink and flex-basis. The
       second and third parameters (flex-shrink and flex-basis) are optional.
     </section>
-    <section class="content">
-      The flex property is a sub-property of the Flexible Box Layout module.
-      This is the shorthand for flex-grow, flex-shrink and flex-basis. The
-      second and third parameters (flex-shrink and flex-basis) are optional.
-    </section>
-      <section class="exemple">
-     <h2 class="exmpleTilte">examples</h2>
+    <section class="exemple">
+      <h2 class="exmpleTilte">examples</h2>
       <div class="exemples">
-        <a
-          ><img
-            src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif"
-            alt=""
-          />
+        <a>
+          <iframe
+            height="265"
+            style="width: 100%"
+            scrolling="no"
+            title="the klarna copycat"
+            src="https://codepen.io/emmy-html/embed/LYRBzyG?height=265&theme-id=light&default-tab=css,result"
+            frameborder="no"
+            loading="lazy"
+            allowtransparency="true"
+            allowfullscreen="true"
+          >
+            See the Pen
+            <a href="https://codepen.io/emmy-html/pen/LYRBzyG"
+              >the klarna copycat</a
+            >
+            by Emmy J. (<a href="https://codepen.io/emmy-html">@emmy-html</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
           <p>here there is an examples</p></a
         >
         <a
-          ><img
-            src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif"
-            alt=""
-          />
+          ><iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/V_DHCUTT43k"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
           <p>here there is an examples</p></a
         >
       </div>
     </section>
-
 
     <footer>
       <a href="#" class="link-b">Privacy</a>

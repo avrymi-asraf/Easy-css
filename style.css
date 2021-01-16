@@ -6,6 +6,17 @@ font-family: 'Josefin Sans', sans-serif;       - content
 font-family: 'Reenie Beanie', cursive; -  כתב יד
  */
 
+
+
+ /* div {
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} */
+/* define color set */
 :root {
   --c-purpel: #6b5b95;
   --c-orenge: #feb236;
@@ -14,6 +25,8 @@ font-family: 'Reenie Beanie', cursive; -  כתב יד
   --c-gray-2: #ccc;
   --c-gray-3: #555;
 }
+
+/* main style, background, links, and code snippte */
 body {
   background: ghostwhite;
 }
@@ -28,7 +41,7 @@ code {
   font-size: 105%;
 }
 
-
+/* nvigation bar */
 header {
   position: fixed;
   width: 100%;
@@ -44,6 +57,8 @@ header {
   margin: 0;
   backdrop-filter: blur(20px);
 }
+
+/* for firefox */
 /* .navigation{ 
   
   background: linear-gradient(
@@ -73,7 +88,7 @@ header {
   align-items: center;
  
 }
-
+/* apeects for navbar */
 .navigation a:hover {
   background: var(--c-pink);
   backdrop-filter: blur(20px);
@@ -128,6 +143,8 @@ header {
 #toc:hover {
   right: 0;
 }
+
+/*  */
 
 .firstSec {
   margin-top: 100px;
@@ -247,6 +264,11 @@ section {
   width: 100%;
   max-height: 100%;
 }
+/* css for animation page */
+#animation-container{
+  
+}
+
 
 footer {
   margin: 40px 3em -5px;
