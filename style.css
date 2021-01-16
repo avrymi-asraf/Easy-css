@@ -16,15 +16,15 @@ font-family: 'Reenie Beanie', cursive; -  כתב יד
 } */
 /* define color set */
 :root {
-  --c-purpel: #6b5b95;
-  --c-orenge: #feb236;
-  --c-pink: #d64161;
-  --c-horenge: #ff7b25;
-  --c-gray-2: #ccc;
-  --c-gray-3: #555;
+  --purpel: #6b5b95;
+  --orange: #feb236;
+  --pink: #d64161;
+  --Sorange: #ff7b25;
+  --gray-2: #ccc;
+  --gray-3: #555;
 }
 
-/* main style, background, links, and code snippte */
+/*--------------------------------------------------------- main style, background, links, and code snippte */
 body {
   background: ghostwhite;
 }
@@ -39,7 +39,7 @@ code {
   font-size: 90%;
 }
 
-/* nvigation bar */
+/*------------------------------------------------------------------------------------------ nvigation bar */
 header {
   position: fixed;
   width: 100%;
@@ -76,7 +76,7 @@ header {
   display: flex;
   padding: 0 1em;
   height: 3em;
-  color: var(--c-gray-3);
+  color: var(--gray-3);
   font-family: "Boogaloo", cursive;
   font-size: 2em;
   transition-property: background;
@@ -85,13 +85,13 @@ header {
   justify-content: center;
   align-items: center;
 }
-/* apeects for navbar */
+
 .navigation a:hover {
-  background: var(--c-pink);
+  background: var(--pink);
   backdrop-filter: blur(20px);
 }
 .navigation #tihs-page {
-  background: var(--c-pink);
+  background: var(--pink);
   backdrop-filter: blur(20px);
 }
 @media all and (max-width: 800px) {
@@ -99,7 +99,22 @@ header {
     justify-content: space-around;
   }
 }
-/* toc-------------------------------- */
+
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/*------------------------------------------------------------------------------------------------- toc*/
 #toc {
   transition-property: right;
   transition-duration: 0.6s;
@@ -144,18 +159,18 @@ header {
 #toc:hover {
   right: 0;
 }
+
 @media all and (max-width: 800px) {
   #tcp{display: none;}
 }
 
-/*define sections  */
+
+/*-------------------------------------------------------- definde every section */
 
 .firstSec {
   margin-top: 100px;
 }
 
-
-/* definde every section */
 section {
   height: 100vh;
   align-content: center;
@@ -169,7 +184,37 @@ section {
   height: 50vh;
 } 
 }
-/* title section */
+
+
+/*------------------------------------------------------------------------- footer */
+
+
+footer {
+  margin: 40px 3em -5px;
+  background: var(--purpel);
+  padding: 2em;
+  border-radius: 20px 20px 0 0;
+  display: flex-end;
+  font-family: "Jockey One", sans-serif;
+  align-items: flex-end;
+}
+
+footer a {
+  display: inline;
+  margin: 1em;
+}
+footer span {
+  margin: 1em;
+  display: block;
+}
+footer img {
+  display: inline;
+  margin-bottom: -70px;
+}
+
+
+
+/*------------------------------------------------------------------------ title section */
 
 .pageTitle {
   display: grid;
@@ -194,7 +239,7 @@ section {
   margin: 0;
 }
 
-/*                                     grid for section content */
+/*----------------------------------------------------------grid for section content */
 
 .content {
   display: grid;
@@ -244,7 +289,10 @@ section {
   object-fit: cover;
   width: 100%;
 }
-/* media qery for content page */
+
+
+
+/*-----------------------------------------  */
 @media all and (max-width: 800px) {
  .content {
   display: grid;
@@ -255,77 +303,53 @@ section {
   overflow: auto;
 }
 .content h1 {
-  font-family: "Jockey One", sans-serif;
   font-size: 3vh;
 }
 .content p {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 2vh;
   line-height: 100%;
 }
 }
-/* exmple sections                           */
 
-.exemple {
+
+/*------------------------------------------------------- exmple sections*/
+
+.examples {
   display: flex;
-  background: var(--c-gray-2);
+  background: var(--gray-2);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.exemple h2 {
+.examples h2 {
   font-family: "Jockey One", sans-serif;
   font-size: 5vw;
   margin-top: -1vh;
 }
 
-.exemples {
+.example {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
-.exemples a {
-  background: var(--c-horenge);
+.example a {
+  background: var(--Sorange);
   border-radius: 3%;
   display: block;
   padding: 1vw;
   text-align: center;
    font-family: "Jockey One", sans-serif;
 }
-.exemples img {
+.example img {
   height: 30vh;
   object-fit: cover;
   width: 100%;
   max-height: 100%;
 }
 
-footer {
-  margin: 40px 3em -5px;
-  background: var(--c-purpel);
-  padding: 2em;
-  border-radius: 20px 20px 0 0;
-  display: flex-end;
-  font-family: "Jockey One", sans-serif;
-  align-items: flex-end;
-}
 
-footer a {
-  display: inline;
-  margin: 1em;
-}
-footer span {
-  margin: 1em;
-  display: block;
-}
-footer img {
-  display: inline;
-  margin-bottom: -70px;
-}
-
-
-
-/* css for opening page  */
+/*------------------------------------------------------ css for opening page  */
 
 #title-page {
   display: flex;
@@ -375,7 +399,7 @@ footer img {
   background: #d6416150;
 }
 .form-container .btn {
-  background-color: var(--c-purpel);
+  background-color: var(--purpel);
   color: white;
   padding: 16px 20px;
   border: none;
@@ -387,7 +411,9 @@ footer img {
   font-family: "Boogaloo", cursive;
   font-size: 100%;
 }
-/* css for animation page */
+
+
+/*------------------------------------------------------------------------- css for animation page */
 .do-con {
   position: absolute;
   width: 30vw;
@@ -396,7 +422,7 @@ footer img {
   margin-left: -15vw;
   top: 115vh;
   margin-top: -20vw;
-  border: 5px solid var(--c-gray-3);
+  border: 5px solid var(--gray-3);
   display: inline;
   border-radius: 2vw;
 }
@@ -406,7 +432,6 @@ footer img {
 #img-container {
   display: grid;
   grid-template-columns: 15vw 15vw;
-
   /* visibility: hidden; */
 }
 .do-con:hover + #img-container {
@@ -440,15 +465,11 @@ footer img {
   animation-direction: alternate;
 }
 #animation {
-  /* width: 5em;
-  height: 5em; */
-  /* background: var(--c-purpel); */
   font-family: "Jockey One", sans-serif;
   font-size: 3vw;
   text-align: center;
   display: block;
   position: relative;
-  /* animation-name: example; */
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-delay: 1s;
@@ -472,54 +493,5 @@ footer img {
     left: 20vw;
   }
 }
-@keyframes example {
-  0% {
-    background-color: red;
-    left: 15%;
-    top: 0px;
-  }
-  25% {
-    background-color: yellow;
-    left: 35%;
-    top: 0px;
-  }
-  50% {
-    background-color: blue;
-    left: 3%;
-    top: 45%;
-  }
-  75% {
-    background-color: green;
-    left: 0px;
-    top: 200px;
-  }
-  100% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
-}
 
 
-
-@media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
-  .section {
-    height: 500px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .navigation {
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  .navigation a {
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-}
