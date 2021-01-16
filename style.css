@@ -36,7 +36,7 @@ code {
   color: crimson;
   background-color: #f1f1f1;
   padding: 2px;
-  font-size: 105%;
+  font-size: 90%;
 }
 
 /* nvigation bar */
@@ -94,7 +94,11 @@ header {
   background: var(--c-pink);
   backdrop-filter: blur(20px);
 }
-
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
 /* toc-------------------------------- */
 #toc {
   transition-property: right;
@@ -140,16 +144,30 @@ header {
 #toc:hover {
   right: 0;
 }
+@media all and (max-width: 800px) {
+  #tcp{display: none;}
+}
 
-/*  */
+/*define sections  */
 
 .firstSec {
   margin-top: 100px;
 }
 
+
+/* definde every section */
 section {
   height: 100vh;
   align-content: center;
+}
+
+@media all and (max-width: 800px) {
+ .firstSec {
+  margin-top: 30vh;
+}
+  section {
+  height: 50vh;
+} 
 }
 /* title section */
 
@@ -186,6 +204,7 @@ section {
   row-gap: 1vw;
   overflow: auto;
 }
+
 
 .left-up {
   grid-column: 2/3;
@@ -225,7 +244,26 @@ section {
   object-fit: cover;
   width: 100%;
 }
-
+/* media qery for content page */
+@media all and (max-width: 800px) {
+ .content {
+  display: grid;
+  grid-template-columns: [le-ma]2vw [content-left]48vw [content-right]48vw [rit-ma]2vw;
+  grid-template-rows: [only-text]10vw [text-img]10vw [image]10vw;
+  column-gap: 0vw;
+  row-gap: 1vw;
+  overflow: auto;
+}
+.content h1 {
+  font-family: "Jockey One", sans-serif;
+  font-size: 3vh;
+}
+.content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2vh;
+  line-height: 100%;
+}
+}
 /* exmple sections                           */
 
 .exemple {
@@ -253,12 +291,101 @@ section {
   display: block;
   padding: 1vw;
   text-align: center;
+   font-family: "Jockey One", sans-serif;
 }
 .exemples img {
   height: 30vh;
   object-fit: cover;
   width: 100%;
   max-height: 100%;
+}
+
+footer {
+  margin: 40px 3em -5px;
+  background: var(--c-purpel);
+  padding: 2em;
+  border-radius: 20px 20px 0 0;
+  display: flex-end;
+  font-family: "Jockey One", sans-serif;
+  align-items: flex-end;
+}
+
+footer a {
+  display: inline;
+  margin: 1em;
+}
+footer span {
+  margin: 1em;
+  display: block;
+}
+footer img {
+  display: inline;
+  margin-bottom: -70px;
+}
+
+
+
+/* css for opening page  */
+
+#title-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: ;
+}
+
+#title-page h1 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 10vw;
+  padding: 0;
+  margin: 0;
+}
+
+#title-page h2 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 5vw;
+}
+#sign-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: ;
+}
+
+.form-container {
+  max-width: 40vw;
+  padding: 10px;
+  background-color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2vw;
+}
+
+.form-container input {
+  width: 90%;
+  padding: 1vw;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 7px;
+}
+
+.form-container input:hover {
+  background: #d6416150;
+}
+.form-container .btn {
+  background-color: var(--c-purpel);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  border-radius: 7px;
+  font-family: "Boogaloo", cursive;
+  font-size: 100%;
 }
 /* css for animation page */
 .do-con {
@@ -273,14 +400,13 @@ section {
   display: inline;
   border-radius: 2vw;
 }
-#animation-container{
+#animation-container {
   /* background-color: #555; */
-  
 }
 #img-container {
   display: grid;
   grid-template-columns: 15vw 15vw;
-  
+
   /* visibility: hidden; */
 }
 .do-con:hover + #img-container {
@@ -317,7 +443,7 @@ section {
   /* width: 5em;
   height: 5em; */
   /* background: var(--c-purpel); */
-  font-family: 'Jockey One', sans-serif; 
+  font-family: "Jockey One", sans-serif;
   font-size: 3vw;
   text-align: center;
   display: block;
@@ -340,7 +466,7 @@ section {
 }
 @keyframes imgToLeft {
   from {
-    left:0 ;
+    left: 0;
   }
   to {
     left: 20vw;
@@ -374,28 +500,7 @@ section {
   }
 }
 
-footer {
-  margin: 40px 3em -5px;
-  background: var(--c-purpel);
-  padding: 2em;
-  border-radius: 20px 20px 0 0;
-  display: flex-end;
-  font-family: "Jockey One", sans-serif;
-  align-items: flex-end;
-}
 
-footer a {
-  display: inline;
-  margin: 1em;
-}
-footer span {
-  margin: 1em;
-  display: block;
-}
-footer img {
-  display: inline;
-  margin-bottom: -70px;
-}
 
 @media all and (max-width: 800px) {
   .navigation {
