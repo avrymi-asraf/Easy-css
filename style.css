@@ -94,10 +94,17 @@ header {
   background: var(--pink);
   backdrop-filter: blur(20px);
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
   .navigation {
     justify-content: space-around;
   }
+  .navigation a {
+  display: flex;
+  padding:0 0.2em;
+  text-align: center;
+  align-items: center;
+  font-size: 1.3em;
+}
 }
 
 
@@ -176,7 +183,7 @@ section {
   align-content: center;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
  .firstSec {
   margin-top: 30vh;
 }
@@ -207,11 +214,19 @@ footer span {
   margin: 1em;
   display: block;
 }
-footer img {
+footer img  {
   display: inline;
   margin-bottom: -70px;
+  
+  /* border-radius: 50%; */
+}
+.link-footer{
+  justify-self: end;
 }
 
+.link-footer img{
+  width: 40px;
+}
 
 
 /*------------------------------------------------------------------------ title section */
@@ -247,7 +262,7 @@ footer img {
   grid-template-rows: [only-text]10vw [text-img]10vw [image]10vw;
   column-gap: 2vw;
   row-gap: 1vw;
-  overflow: auto;
+  overflow: inherit;
 }
 
 
@@ -293,7 +308,7 @@ footer img {
 
 
 /*-----------------------------------------  */
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
  .content {
   display: grid;
   grid-template-columns: [le-ma]2vw [content-left]48vw [content-right]48vw [rit-ma]2vw;
@@ -414,37 +429,33 @@ footer img {
 
 
 /*------------------------------------------------------------------------- css for animation page */
-.do-con {
-  position: absolute;
-  width: 30vw;
-  height: 40vh;
-  left: 50%;
-  margin-left: -15vw;
-  top: 115vh;
-  margin-top: -20vw;
+.frame-ani {
+  grid-row: 2/3;
+  width: 40vw;
+  height: max-content;
   border: 5px solid var(--gray-3);
   display: inline;
   border-radius: 2vw;
+  text-align: center;
+   display: grid;
+  grid-template-columns: 20vw 20vw;
 }
 #animation-container {
   /* background-color: #555; */
 }
 #img-container {
-  display: grid;
-  grid-template-columns: 15vw 15vw;
+ 
   /* visibility: hidden; */
 }
-.do-con:hover + #img-container {
-  /* transition-duration:5s; */
-  /* transition-property:visibility ; */
-  /* visibility: visible; */
-}
-.do-con img {
+
+
+.frame-ani img {
   position: relative;
   display: inline;
   height: 100%;
   width: 100%;
   object-fit: scale-down;
+  margin-bottom: -30px;
 }
 #img1 {
   grid-column: 1/2;
